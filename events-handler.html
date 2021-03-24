@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        
+        <script src="js/react.development.js"></script>
+        <script src="js/react-dom.development.js"></script>
+        <script src="js/babel.js"></script>
+
+        <script type="text/babel">
+            const rootHandle = document.getElementById('root')
+
+            function GreetUser(props) {
+                function display() {
+                    alert ('Hi,' + props.name)
+                }
+                return (
+                    <button onClick={display}> click me </button>
+                )
+            }
+                const ele = <GreetUser name='steve' />
+  
+            ReactDOM.render(ele ,rootHandle)
+            
+        </script>
+    </body>
+</html>
